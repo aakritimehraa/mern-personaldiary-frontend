@@ -28,7 +28,7 @@ const createNote = async(e) => {
                const newNote = {
                  content , emotion 
                }
-               await axios.post('https://mern-personaldiary.onrender.com/api/notes' , newNote , {
+               await axios.post('/api/notes' , newNote , {
                 headers: {Authorization: token}
                })
                console.log(note)

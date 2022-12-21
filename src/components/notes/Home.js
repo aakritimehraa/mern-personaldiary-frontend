@@ -13,7 +13,7 @@ function Home() {
 
  
     const getNotes = async (token) => {
-        const res = await axios.get('https://mern-personaldiary.onrender.com/api/notes' , {
+        const res = await axios.get('api/notes' , {
             headers: {Authorization: token}
         })
         setNotes(res.data)
@@ -31,7 +31,7 @@ function Home() {
     const deleteNote = async (id) => {
         try{
           if(token) {
-            await axios.delete(`https://mern-personaldiary.onrender.com/api/notes/${id}` , {
+            await axios.delete(`api/notes/${id}` , {
                 headers: {Authorization: token}
             })
             getNotes(token)
