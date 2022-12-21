@@ -26,7 +26,7 @@ function ReadNote() {
         const getNote = async () =>{
             const token = localStorage.getItem('tokenStore')
             if(editid.id){
-                const res = await axios.get(`/api/notes/${editid.id}`, {
+                const res = await axios.get(`https://mern-personaldiary.onrender.com/api/notes/${editid.id}`, {
                     headers: {Authorization: token}
                 })
                 setNote({

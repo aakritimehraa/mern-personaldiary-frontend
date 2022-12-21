@@ -27,7 +27,7 @@ useEffect(() =>{
     const getNote = async () =>{
         const token = localStorage.getItem('tokenStore')
         if(editid.id){
-            const res = await axios.get(`/api/notes/${editid.id}`, {
+            const res = await axios.get(`https://mern-personaldiary.onrender.com/api/notes/${editid.id}`, {
                 headers: {Authorization: token}
             })
             setNote({
@@ -52,7 +52,7 @@ const editNote = async e => {
              content, emotion
             }
 
-            await axios.put(`/api/notes/${id}`, newNote, {
+            await axios.put(`https://mern-personaldiary.onrender.com/api/notes/${id}`, newNote, {
                 headers: {Authorization: token}
             })
             
